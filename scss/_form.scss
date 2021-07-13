@@ -1,0 +1,50 @@
+.form {
+    
+    &--pc {
+        display: none;
+
+        @media(min-width:992px) {
+            display: flex;
+            flex-direction: initial;
+        }
+    }
+    &--mob {
+        @media(min-width:992px) {
+            display: none;
+        }
+    }
+    &-loupe {
+        height: 30px;
+        width: 30px;
+        fill: $form-text-color;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        cursor: pointer;
+
+        &:hover{
+            fill: #ffffff;
+            transition: all .3s;
+        }
+    }
+    &__input {
+        position: relative;
+        &-item {  
+            width: 275px;
+            height: 50px;
+            background-color: #18151a;
+            color: #ffffff;
+            padding-left: 50px;
+
+            @media(min-width:992px) {
+                width: 400px;
+            }
+
+            &::placeholder {
+                color: $form-text-color;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }  
+    }
+}

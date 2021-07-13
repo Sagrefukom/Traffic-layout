@@ -1,0 +1,59 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: $body-bg;
+    border-bottom: 1px solid $border-color;
+
+    &__container {
+        max-width: 1560px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        min-height: 65px;
+        position: relative;
+
+    }
+    &__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 70px;
+        padding: 15px;
+        overflow: auto;
+        transform: translateX(100%);
+        width: 100%;
+        min-height: 100%;
+        z-index: 50;
+        transition: transform .3s ease-in-out;
+        background-color: $body-bg;
+
+        @media (min-width: 992px) {
+            position: absolute;
+            transform: inherit;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 91px;
+            padding: initial;
+            width: 100%;
+            height: 80px;
+            background-color: $body-bg;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

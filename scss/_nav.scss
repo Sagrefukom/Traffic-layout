@@ -1,0 +1,44 @@
+.nav {
+
+    &--burger {
+        transform: translateX(0);
+    }
+
+    &__list {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+
+        @media(min-width:992px) {
+            flex-direction: initial;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px 15px;
+        }
+        @media(min-width:1200px) {
+            width: 70%;
+        }
+    }
+    &__link {
+        margin: 20px 0;
+
+        @media(min-width:992px) {
+            margin: initial;
+        }
+
+        &-item {
+            color: #fff;
+            @include adaptive-font(20, 18);
+            font-weight: 700;
+            padding: 10px 0;
+
+            &:hover {
+                color: $orange-color;
+                transition: all .3s ;
+            }
+        }
+    }
+}
