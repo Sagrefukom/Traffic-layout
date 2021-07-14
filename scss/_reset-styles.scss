@@ -84,7 +84,6 @@
     font-size: inherit;
     font-weight: 400;
   }
-
   body.lock {
     overflow: hidden;
   }
@@ -100,6 +99,10 @@
     max-width: 1560px;
     width: 100%;
     margin: 0 auto;
+
+    &--testi {
+      max-width: initial;
+    }
   }
   .top-games {
     position: relative;

@@ -16,29 +16,32 @@
 .icon {
     fill: violet;
 }
-.racing {
-    &__swiper {
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
 
-        &-container {
-            width: 100%;
-            max-height: 350px;
-
-            @media(min-width:992px) {
-                max-height: 550px;
-            }
-        }
-        &-wrapper {
-            position: relative;
-        }
-        &-slide {
-            position: relative;
-
-        }
-        &-img {
-            max-width: 100%;
-        }
-    }
-}
+.countdown {
+    display: flex;
+    text-align: center;
+  }
+   
+  .countdown-number {
+    width: 80px;
+    background: $block-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  .countdown-time {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 900;
+    color: $orange-color;
+  }
+   
+  .countdown-text {
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
