@@ -1,0 +1,173 @@
+.card {
+    max-width: 377px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: $block-bg;
+
+    &:hover>.card__img>.card__img-hover {
+        display: flex;
+    }
+    &:hover>.card__img>.card__img-item {
+        opacity: .5;
+        cursor: pointer;
+    }
+
+    @media(min-width:480px) {
+        min-height: 400px;
+    }
+
+    &__img {
+        position: relative;
+
+        &-btn {
+            margin: initial;
+        }
+
+        &-hover {
+            position: absolute;
+            bottom: -12px;
+            width: 100%;
+            display: none;
+        }
+
+        &-item {
+            max-width: 100%;
+        }
+        
+    }
+    &__triangle {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 1.5em 1.5em 1.5em 1.5em;
+        border-color: $red-color $red-color transparent transparent;
+
+        @media(min-width:480px) {
+            border-width: 2.5em 2.5em 2.5em 2.5em;
+        }
+
+        &>p {
+            position: absolute;
+            bottom: 0;
+            left: -5px;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 900;
+            color: #ffffff;
+
+            @media(min-width:480px) {
+                bottom: 5px;
+                left: -6px;
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 100%;
+        padding: 15px 5px;
+
+        @media(min-width:480px) {
+            padding: 25px;
+        }
+        &-title {
+            font-size: 14px;
+            line-height: 40px;
+            font-weight: 700;
+            color: #ffffff;
+
+            @media(min-width:480px) {
+                font-size: 18px;
+             }
+        }
+        &-rang {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            
+
+            @media(min-width:480px) {
+                flex-direction: initial;
+                width: 100%;
+            }
+        }
+        &-stars {
+            display: flex;
+            &>svg {
+                width: 18px;
+                height: 18px;
+                fill: $orange-color;
+                margin: 0 3px;
+                &:nth-of-type(5) {
+                    fill: #000000;
+                    stroke-width: 1px ;
+                    stroke: $orange-color;
+                }
+            }
+            
+        }
+        &-cost {
+            display: flex;
+            &>p {
+                &:nth-of-type(1) {
+                    font-size: 12px;
+                    line-height: 40px;
+                    font-weight: 400;
+                    text-decoration: line-through;
+                    color: $form-text-color;
+
+                    @media(min-width:480px) {
+                        font-size: 14px;
+                    }
+                }
+                &:nth-of-type(2) {
+                    font-size: 16px;
+                    line-height: 40px;
+                    font-weight: 900;
+                    color: $pink-color;
+                    margin-left: 15px;
+
+                    @media(min-width:480px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+            &--nosale {
+                &>p {
+                    &:nth-of-type(1) {
+                        font-size: 16px;
+                        line-height: 40px;
+                        font-weight: 900;
+                        color: $pink-color;
+                        margin-left: 15px;
+                        text-decoration: initial;
+    
+                        @media(min-width:480px) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        &-desc {
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 300;
+            color: $dark-text-color;
+
+            @media(min-width:480px) {
+               font-size: 14px;
+            }
+        }
+    }
+}

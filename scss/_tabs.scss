@@ -1,0 +1,58 @@
+.tabs {
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 15px;
+
+
+        @media(min-width:992px) {
+            justify-content: flex-start;
+            margin-left: 15px;
+        }
+
+        &-item {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            color: $dark-text-color;
+            cursor: pointer;
+            position: relative;
+            margin-right: 15px;
+
+            @media(min-width:480px) {
+                margin-right: 75px;
+            }
+
+            &.active::after {
+                content: "";
+                display: block;
+                width: 100%;
+                border-bottom: 2px solid $orange-color;
+                position: absolute;
+                bottom: -16px;
+                left: 0;
+            }
+
+            &.active {
+                color: #ffffff;
+                transition: color .3s ease;
+            }
+        }
+    }
+    &__content {
+        display: flex;
+        min-width: 0;
+    }
+    &__tab {
+        display: none;
+        padding: 20px 10px;
+        min-width: 0;
+        
+        &.active {
+            display: flex;
+        }
+    }
+}

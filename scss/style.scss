@@ -6,7 +6,39 @@
 @import 'burger';
 @import 'form';
 @import 'btn';
-@import 'swiper';
+@import 'slider';
+@import 'features';
+@import 'tabs';
+@import 'games';
+@import 'card';
+@import 'type';
+
 .icon {
     fill: violet;
+}
+.racing {
+    &__swiper {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        &-container {
+            width: 100%;
+            max-height: 350px;
+
+            @media(min-width:992px) {
+                max-height: 550px;
+            }
+        }
+        &-wrapper {
+            position: relative;
+        }
+        &-slide {
+            position: relative;
+
+        }
+        &-img {
+            max-width: 100%;
+        }
+    }
 }

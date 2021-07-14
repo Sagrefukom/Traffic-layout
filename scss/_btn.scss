@@ -15,7 +15,7 @@
     // transition: background-color .5s ease;
 
     @media(min-width:992px) {
-        width: 160px;
+        width: 190px;
         margin: 10px 0 10px 10px;
     }
     &--orange {
@@ -31,5 +31,8 @@
         &:hover {
             background: $purple-color;
         }
+    }
+    &--hover {
+        margin: initial;
     }
 }
