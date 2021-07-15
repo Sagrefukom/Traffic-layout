@@ -1,0 +1,120 @@
+.about {
+    background-color: $block-bg;
+    max-width: 1980px;
+    margin: 0 auto;
+    padding: 50px 0;
+    position: relative;
+    &-content {
+        display: flex;
+        flex-direction: column;
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        padding: 20px 15px;
+
+        @media (min-width:992px) {
+            flex-direction: row;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        &--reverse {
+            @media (min-width:992px) {
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+            }
+        }
+    }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        @media (min-width:992px) {
+            padding: initial;
+            max-width: 620px;
+        }
+    }
+    &-title {
+        font-size: 22px;
+        line-height: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding: 20px 0;
+
+        @media (min-width:768px) {
+            font-size: 32px;
+        }
+        @media (min-width:992px) {
+            padding: initial;
+            padding-bottom: 20px;
+        }
+    }
+    &-subtitle {
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #ffffff;
+        padding: 10px 15px;
+    }
+    &-list>li {
+        list-style-type: disc;
+        margin-left: 15px;
+    }
+    &-text {
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 400;
+        padding: 20px 0;
+        color: $dark-text-color;
+
+        @media (min-width:768px) {
+            font-size: 16px;
+        }
+        @media (min-width:992px) {
+            padding: initial;
+            padding-bottom: 20px;
+        }
+
+        &--width {
+            max-width: 1130px;
+            padding: 15px;
+        }
+    }
+    &__img {
+        align-self: flex-start;
+        padding: 20px 0;
+
+        @media(min-width:992px) {
+            padding: 20px 0 20px 20px;
+        }
+
+        &--reverse {
+
+            @media(min-width:992px) {
+                padding: 20px 20px 20px 0;
+            }
+        }
+        &-item {
+            max-width: 100%;
+            @media(min-width:600px) {
+                width: 585px;
+            }
+            @media(min-width:768px) {
+                max-width: initial;
+                width: 740px;
+            }
+            @media(min-width:992px) {
+                max-width: initial;
+                width: 485px;
+                height: 350px;
+            }
+        }
+    }
+}

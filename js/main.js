@@ -164,3 +164,33 @@ function initializeClock(id, endtime) {
 let deadline = new Date(Date.parse(new Date()) + 16 * 24 * 60 * 60 * 1000);
 initializeClock('countdown', deadline);
 //COUNTDOWN
+
+//SCROLL
+  window.addEventListener('scroll', ()=> {
+    const scrolled = window.pageYOffset;
+    const aside = document.querySelector('#scroll');
+    console.log(scrolled);
+
+      if(scrolled >= 1900  && scrolled <= 2590) {
+        aside.classList.add('fixed');
+      } else {
+        aside.classList.remove('fixed');
+      }
+  });
+//SCROLL
+
+//ACCORDION
+var acc = document.querySelectorAll(".footer__block-title--accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+//ACCORDION

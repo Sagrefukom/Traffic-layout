@@ -32,12 +32,16 @@
             background: $purple-color;
         }
     }
-    &--hover {
+    &--about {
         margin: initial;
     }
     &--deal {
         align-self: center;
         margin: 20px 0 0 0;
         width: 100%;
+    }
+    &--footer {
+        margin: initial;
+        width: 40%;
     }
 }

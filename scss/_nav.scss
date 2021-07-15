@@ -14,13 +14,20 @@
 
         @media(min-width:992px) {
             flex-direction: initial;
-            justify-content: space-between;
+            max-width: 1560px;
             width: 100%;
             padding: 10px 15px;
+
+            & li:not(:first-child){
+                margin-left: 50px;
+            }
         }
         @media(min-width:1200px) {
-            width: 70%;
+            & li:not(:first-child){
+                margin-left: 80px;
+            }
         }
+        
     }
     &__link {
         margin: 20px 0;

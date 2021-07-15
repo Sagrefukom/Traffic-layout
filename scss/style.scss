@@ -12,36 +12,10 @@
 @import 'games';
 @import 'card';
 @import 'type';
+@import 'about';
+@import 'footer';
 
 .icon {
     fill: violet;
 }
 
-.countdown {
-    display: flex;
-    text-align: center;
-  }
-   
-  .countdown-number {
-    width: 80px;
-    background: $block-bg;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-   
-  .countdown-time {
-    font-size: 24px;
-    line-height: 40px;
-    font-weight: 900;
-    color: $orange-color;
-  }
-   
-  .countdown-text {
-    font-size: 12px;
-    line-height: 40px;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
