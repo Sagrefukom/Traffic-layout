@@ -169,7 +169,6 @@ initializeClock('countdown', deadline);
   window.addEventListener('scroll', ()=> {
     const scrolled = window.pageYOffset;
     const aside = document.querySelector('#scroll');
-    console.log(scrolled);
 
       if(scrolled >= 1900  && scrolled <= 2590) {
         aside.classList.add('fixed');
@@ -194,3 +193,30 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 //ACCORDION
+
+//POPUP
+  const popupsOpen = document.querySelectorAll('.open-popup');
+  const popupsClose = document.querySelectorAll('.popup-close');
+
+    popupsOpen.forEach(function(item) {
+      item.addEventListener('click', function() {
+        const popupName = item.getAttribute('data-popup');
+        document.getElementById(popupName).style.opacity = 1 ;
+        document.getElementById(popupName).style.visibility = 'visible';
+
+        window.onclick = function(e) {
+          if(e.target.classList.contains('popup-body')) {
+            document.getElementById(popupName).style.opacity = 0 ;
+            document.getElementById(popupName).style.visibility = 'hidden';
+          }
+        }
+      });
+    });
+    popupsClose.forEach(function(item) {
+      item.addEventListener('click', function() {
+        const popup = item.closest('.popup');
+            popup.style.opacity = 0 ;
+            popup.style.visibility = 'hidden';
+      });
+    });
+//POPUP

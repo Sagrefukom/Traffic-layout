@@ -27,8 +27,8 @@
                     </svg>
                     <input class="form__input-item" type="text" placeholder="Search game...">
                 </div>
-                <button class="form__btn btn btn--orange">Register</button>
-                <button class="form__btn btn btn--purple">Login</button>
+                <button data-popup="popup-register" class="form__btn btn btn--orange open-popup">Register</button>
+                <button data-popup="popup-login" class="form__btn btn btn--purple open-popup">Login</button>
             </div>
             <nav class="header__nav nav">
                 <ul class="nav__list">
@@ -47,14 +47,13 @@
                         </svg>
                         <input class="form__input-item" type="text" placeholder="Search game...">
                     </div>
-                    <button class="form__btn btn btn--orange">Register</button>
-                    <button class="form__btn btn btn--purple">Login</button>
+                    <button data-popup="popup-register" class="form__btn btn btn--orange open-popup">Register</button>
+                    <button data-popup="popup-login" class="form__btn btn btn--purple open-popup">Login</button>
                 </div>
             </nav>
         </div>
     </header>
-    <main class="main">
-        
+    <main class="main">        
         <section class="slider">
             <div class="slider-container swiper-container">
                 <div class="slider-wrapper swiper-wrapper">
@@ -706,7 +705,7 @@
                     <li class="footer__link"><a class="footer__link-item" href="">About us</a></li>
                     <li class="footer__link"><a class="footer__link-item" href="">Secure payment</a></li>
                 </ul>
-            </div><a href=""></a>
+            </div>
             <div class="footer__block footer__block--accordion">
                 <p class="footer__block-title footer__block-title--accordion">USEFUL LINKS</p>
                 <ul class="footer__list footer__list--accordion">
@@ -720,7 +719,7 @@
             </div>
             <div class="footer__block footer__block--accordion">
                 <p class="footer__block-title footer__block-title--accordion">Contact INFO & PAYMENT</p>
-                <ul class="footer__list footer__list--accordion">
+                <div class="footer__list footer__list--accordion">
                     <div class="footer__info">
                         <svg class="footer-icon footer-icon--geo">
                             <use xlink:href="./img/sprite.svg#geo"></use>
@@ -741,14 +740,14 @@
                         </svg>
                         <p class="footer__info-text"><a>sales@yourcompany.com</a></p>
                     </div>
-                </ul>
+                </div>
             </div>
             <div class="footer__block footer__block--form">
                 <p class="footer__block-title">Our Newsletter</p>
-                <ul class="footer__list">
+                <div class="footer__list">
                     <p class="footer__info-text">But now the title has been confirmed as an early
                          release to show off the technical capabilities of the PS5 by</p>
-                    <form class="footer__form form" action="">
+                    <form class="footer__form form">
                         <input class="form__input-item form__input-item--footer" type="text" placeholder="Your email...">
                         <button class="btn btn--orange btn--footer">subscribe</button>
                     </form>
@@ -768,36 +767,45 @@
                             Copyright © 2021 . All Rights Reserved
                         </p>
                     </div>
-                </ul>
+                </div>
             </div>
         </div>
     </footer>
-    <!-- <div class="svg">
-    <svg class="icon">
-        <use xlink:href="./img/sprite.svg#facebook"></use>
-    </svg>
-    <svg class="icon">
-     <use xlink:href="./img/sprite.svg#twitter"></use>
-     </svg>
-     <svg class="icon">
-         <use xlink:href="./img/sprite.svg#linkedin"></use>
-     </svg>
-     <svg class="icon">
-         <use xlink:href="./img/sprite.svg#star"></use>
-     </svg>
-     <svg class="icon">
-         <use xlink:href="./img/sprite.svg#loupe"></use>
-     </svg>
-     <svg class="icon">
-         <use xlink:href="./img/sprite.svg#phone-call"></use>
-     </svg>
-     <svg class="icon">
-         <use xlink:href="./img/sprite.svg#email"></use>
-     </svg>
-     <svg class="icon">
-         <use xlink:href="./img/sprite.svg#geo"></use>
-     </svg>
-   </div> -->
+    <div id="popup-register" class="popup popup--register">
+        <div class="popup-body">
+            <div class="popup-content">
+                <a class="popup-close" >X</a>
+                <div class="popup-title">create account</div>
+                <form class="popup__form">
+                    <input class="form__input-item form__input-item--popup" type="text" placeholder="Username">
+                    <input class="form__input-item form__input-item--popup" type="email" placeholder="Email">
+                    <input class="form__input-item form__input-item--popup" type="password" placeholder="Password">
+                    <button class="btn btn--orange btn--popup">register</button>
+                </form>
+                <div class="popup__text">
+                    <p class="popup__text-normal">Have Account?</p>
+                    <a class="popup__text-link" href="">Login Here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup-login" class="popup popup--login">
+        <div class="popup-body">
+            <div class="popup-content">
+                <a class="popup-close" >X</a>
+                <div class="popup-title">sign in</div>
+                <form class="popup__form">
+                    <input class="form__input-item form__input-item--popup" type="text" placeholder="Username or email">
+                    <input class="form__input-item form__input-item--popup" type="password" placeholder="Password">
+                    <button class="btn btn--purple btn--popup">login</button>
+                </form>
+                <div class="popup__text">
+                    <p class="popup__text-normal">No Account?</p>
+                    <a class="popup__text-link" href="">Register Here</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/main.min.js"></script>

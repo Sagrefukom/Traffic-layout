@@ -51,6 +51,16 @@
                 width: 60%;
                 padding-left: 25px;
             }
+            &--popup {
+                width: 100%;
+                margin: 10px 0;
+                padding-left: 25px;
+                transition: all .8s;
+
+                &:focus {
+                    border: 1px solid rgba(137,124,195,0.8);
+                }
+            }
         }  
     }
 }
