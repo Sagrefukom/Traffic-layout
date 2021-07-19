@@ -28,10 +28,10 @@ new Swiper('.slider-container', {
   observer: true,
   observParents: true,
   observSlideChildren: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 7000,
+    disableOnInteraction: false,
+  },
 });
 new Swiper('.games__swiper-container', {
   direction: 'horizontal',
@@ -50,10 +50,10 @@ new Swiper('.games__swiper-container', {
   observer: true,
   observeParents: true,
   observSlideChildren: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     768: {
       slidesPerView: 2,
@@ -90,6 +90,10 @@ new Swiper('.type__slider-container', {
   observer: true,
   observeParents: true,
   observSlideChildren: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
 
 });
 //SWIPER
