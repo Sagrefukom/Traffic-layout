@@ -12,7 +12,8 @@ if (burger) {
 //BURGER
 
 //SWIPER
-new Swiper('.slider-container', {
+
+const slider = new Swiper('.slider-container', {
   direction: 'horizontal',
   loop: true,
   autoHeight: true,
@@ -33,7 +34,7 @@ new Swiper('.slider-container', {
     disableOnInteraction: false,
   },
 });
-new Swiper('.games__swiper-container', {
+const gamesSwiper = new Swiper('.games__swiper-container', {
   direction: 'horizontal',
   loop: true,
   autoHeight: true,
@@ -67,7 +68,7 @@ new Swiper('.games__swiper-container', {
   }
 
 });
-new Swiper('.type__slider-container', {
+const typeSlider = new Swiper('.type__slider-container', {
   direction: 'horizontal',
   loop: true,
   autoHeight: true,
@@ -96,6 +97,7 @@ new Swiper('.type__slider-container', {
   },
 
 });
+
 //SWIPER
 
 //TABS
